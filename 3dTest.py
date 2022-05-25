@@ -133,11 +133,13 @@ class cube:
 myCube = cube()
 
 while True:
+    myCube.xPos = pygame.mouse.get_pos()[0]-w/2
+    myCube.yPos = pygame.mouse.get_pos()[1] - w / 2
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             breakpoint(0)
     screen.fill((0, 0, 0))
 
-    myCube.initialize(True, True, False)
+    myCube.initialize(False, True, False)
 
     pygame.display.update()
