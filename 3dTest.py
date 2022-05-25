@@ -79,21 +79,21 @@ class cube:
         self.zTemp = self.zPos
 
     def drawLines(self):
-        pygame.draw.line(screen, self.colour, (self.vert8.pos.x, self.vert8.pos.y), (self.vert7.pos.x, self.vert7.pos.y))
-        pygame.draw.line(screen, self.colour, (self.vert8.pos.x, self.vert8.pos.y), (self.vert4.pos.x, self.vert4.pos.y))
-        pygame.draw.line(screen, self.colour, (self.vert8.pos.x, self.vert8.pos.y), (self.vert6.pos.x, self.vert6.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert8.pos.x, self.vert8.pos.y), (self.vert7.pos.x, self.vert7.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert8.pos.x, self.vert8.pos.y), (self.vert4.pos.x, self.vert4.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert8.pos.x, self.vert8.pos.y), (self.vert6.pos.x, self.vert6.pos.y))
 
-        pygame.draw.line(screen, self.colour, (self.vert2.pos.x, self.vert2.pos.y), (self.vert1.pos.x, self.vert1.pos.y))
-        pygame.draw.line(screen, self.colour, (self.vert2.pos.x, self.vert2.pos.y), (self.vert4.pos.x, self.vert4.pos.y))
-        pygame.draw.line(screen, self.colour, (self.vert2.pos.x, self.vert2.pos.y), (self.vert6.pos.x, self.vert6.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert2.pos.x, self.vert2.pos.y), (self.vert1.pos.x, self.vert1.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert2.pos.x, self.vert2.pos.y), (self.vert4.pos.x, self.vert4.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert2.pos.x, self.vert2.pos.y), (self.vert6.pos.x, self.vert6.pos.y))
 
-        pygame.draw.line(screen, self.colour, (self.vert5.pos.x, self.vert5.pos.y), (self.vert6.pos.x, self.vert6.pos.y))
-        pygame.draw.line(screen, self.colour, (self.vert5.pos.x, self.vert5.pos.y), (self.vert7.pos.x, self.vert7.pos.y))
-        pygame.draw.line(screen, self.colour, (self.vert5.pos.x, self.vert5.pos.y), (self.vert1.pos.x, self.vert1.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert5.pos.x, self.vert5.pos.y), (self.vert6.pos.x, self.vert6.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert5.pos.x, self.vert5.pos.y), (self.vert7.pos.x, self.vert7.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert5.pos.x, self.vert5.pos.y), (self.vert1.pos.x, self.vert1.pos.y))
 
-        pygame.draw.line(screen, self.colour, (self.vert3.pos.x, self.vert3.pos.y), (self.vert7.pos.x, self.vert7.pos.y))
-        pygame.draw.line(screen, self.colour, (self.vert3.pos.x, self.vert3.pos.y), (self.vert1.pos.x, self.vert1.pos.y))
-        pygame.draw.line(screen, self.colour, (self.vert3.pos.x, self.vert3.pos.y), (self.vert4.pos.x, self.vert4.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert3.pos.x, self.vert3.pos.y), (self.vert7.pos.x, self.vert7.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert3.pos.x, self.vert3.pos.y), (self.vert1.pos.x, self.vert1.pos.y))
+        pygame.draw.line(screen, (255,0,0), (self.vert3.pos.x, self.vert3.pos.y), (self.vert4.pos.x, self.vert4.pos.y))
 
     def generateVertices(self):
         self.vert1.circle((0,255,255))
@@ -107,34 +107,28 @@ class cube:
 
     def generateFaces(self, WFRM):
         pygame.draw.polygon(screen, (180, 180, 180), ((self.vert8.pos.x, self.vert8.pos.y), (self.vert7.pos.x, self.vert7.pos.y), (self.vert5.pos.x, self.vert5.pos.y), (self.vert6.pos.x, self.vert6.pos.y)), WFRM)
-
         pygame.draw.polygon(screen, (180, 180, 180), ((self.vert7.pos.x, self.vert7.pos.y), (self.vert3.pos.x, self.vert3.pos.y), (self.vert1.pos.x, self.vert1.pos.y), (self.vert5.pos.x, self.vert5.pos.y)), WFRM)
-
         pygame.draw.polygon(screen, (180, 180, 180), ((self.vert3.pos.x, self.vert3.pos.y), (self.vert4.pos.x, self.vert4.pos.y), (self.vert2.pos.x, self.vert2.pos.y), (self.vert1.pos.x, self.vert1.pos.y)), WFRM)
-
         pygame.draw.polygon(screen, (180, 180, 180), ((self.vert8.pos.x, self.vert8.pos.y), (self.vert7.pos.x, self.vert7.pos.y), (self.vert3.pos.x, self.vert3.pos.y), (self.vert4.pos.x, self.vert4.pos.y)), WFRM)
-
         pygame.draw.polygon(screen, (180, 180, 180), ((self.vert5.pos.x, self.vert5.pos.y), (self.vert1.pos.x, self.vert1.pos.y), (self.vert2.pos.x, self.vert2.pos.y), (self.vert6.pos.x, self.vert6.pos.y)), WFRM)
-
         pygame.draw.polygon(screen, (255, 255, 255), ((self.vert8.pos.x, self.vert8.pos.y), (self.vert4.pos.x, self.vert4.pos.y), (self.vert2.pos.x, self.vert2.pos.y), (self.vert6.pos.x, self.vert6.pos.y)), WFRM)
 
 
 
     def initialize(self, DVRT, DFAC, WFRM):
-        self.setPositions()
-        self.drawLines()
+        if DFAC:
+            self.generateFaces(0)
+        if WFRM:
+            self.drawLines()
         if DVRT:
             self.generateVertices()
-        if DFAC and WFRM:
-            self.generateFaces(3)
-        if DFAC and not WFRM:
-            self.generateFaces(0)
+        self.setPositions()
 
 myCube = cube()
 
 while True:
     myCube.xPos = pygame.mouse.get_pos()[0]-w/2
-    myCube.yPos = pygame.mouse.get_pos()[1] - w / 2
+    myCube.yPos = pygame.mouse.get_pos()[1] - h / 2
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             breakpoint(0)
